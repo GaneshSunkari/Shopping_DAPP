@@ -110,7 +110,7 @@ contract MarketplaceTest is Test{
         //for wrong ETH
         vm.prank(buyer);
         vm.expectRevert();
-        uint orderId=market.buy{value:2 ether}(id,1);
+        market.buy{value:2 ether}(id,1);
 
         //for more qty
 
